@@ -8,7 +8,7 @@ Asena.addCommand({pattern: 'octesti', fromMe: true, desc: IQDESC }, (async (mess
 
     if (message.reply_message === false) return await message.sendMessage('```Lütfen bir mesaja yanıt verin!```');
 
-    await message.client.sendMessage(message.jid, '' + '@' + message.reply_message.jid.split('@')[0] + ' ```Adlı kişiye OÇ testi yapılıyor.. 😋```', MessageType.text, {
+    await message.client.sendMessage(message.jid, '' + '@' + message.reply_message.jid.split('@')[0] + ' ```Adlı kişiye OC testi yapılıyor.. 😋```', MessageType.text, {
         quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
 
     });
@@ -144,6 +144,6 @@ r_text[100] = "%100";
     
     var respoimage = await axios.get(`https://lh3.googleusercontent.com/proxy/o9oAVpzsvrnBvNeIKLCO4Lc4lNvmnFgvLEnPFYMbzDHlqeftVbJ-lwWpdU2_DkE9xVwAqICy5z2Xfqjm_Lrw6rQdFuajAMypdzihpRmGh84VFBZJU4xj1Tb_w6wMpA`, { responseType: 'arraybuffer' })
 
-    await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*→ OÇ testi tamamlandı!*\n*→ OÇ Seviyesi:* ${r_text[i]} 🤷 Coded by Semix`})
+    await message.client.sendMessage(message.jid, Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*→ OC testi tamamlandı!*\n*→ OC Seviyesi:* ${r_text[i]} 🤷 Coded by Semix`})
     
 }));
